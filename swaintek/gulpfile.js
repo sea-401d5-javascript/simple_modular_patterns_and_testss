@@ -9,7 +9,11 @@ gulp.task('mocha', function () {
 
 gulp.task('lint', function () {
   return gulp.src(['**/*.js', '!node_modules'])
-    .pipe(eslint())
+    .pipe(eslint({
+      rules: {
+        'no-var': 1
+      }
+    }))
     .pipe(eslint.format());
 });
 
