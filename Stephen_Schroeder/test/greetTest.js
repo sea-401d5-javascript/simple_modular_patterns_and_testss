@@ -9,8 +9,8 @@ describe('It\'s a greet function', () => {
   });
 });
 
-describe('greetMe console test', function() {
-  it('should take arguments via the console', function() {
+describe('greetMe console test', () => {
+  it('should take arguments via the console', () => {
     var arg = ['node_itself', 'path_to_file', 'HRPuffinstuff'];
     expect(greetMe(arg)).to.equal('hello HRPuffinstuff');
   });
