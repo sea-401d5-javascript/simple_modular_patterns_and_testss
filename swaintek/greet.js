@@ -1,9 +1,7 @@
-exports = module.exports = {};
+'use strict';
 
-exports.hello = function (name) {
-  return ('Hello ' + name);
+const greet = module.exports = function() {
+  return `HI ${process.argv[2] || 'Dave'}`;
 };
 
-if (process.argv[2] != 'undefined') {
-  console.log('Hello ' + process.argv[2]);
-};
+console.log(greet());
