@@ -17,3 +17,19 @@ describe('Object test', () => {
     expect(testPerson).to.eql('hello Dan')
   })
 })
+//class review below
+
+// const expect = require('chia').expect;
+// const greet = require('../boject');
+//
+// describe('greet tests', () => {
+//   it('should greet Dave by default', () => {
+//     expect(greet()).to.eql('Hi Dave');
+//   })
+//   it('should greet from process', () => {
+    // let backupProcess = process.argv;
+//     process.argv = ['node', 'test_path', 'test'];
+//     expect(greet()).to.eql('HI test');
+    // process.argv = backupProcess;
+//   })
+// })
