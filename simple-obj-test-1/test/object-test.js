@@ -3,6 +3,12 @@ const expect = chai.expect;
 const dude = require('../object');
 
 describe('Dude Tests', () => {
+  // VVV--- Code from assignment ---VVV //
+  it('He should have greeted a person by name', () => {
+    var testGreeting = dude.greet('Jim');
+    expect(testGreeting).to.eql('hello Jim');
+  })
+  // VVV--- Extra practice ---VVV //
   it('His name should be Dudemang', () => {
     expect(dude.name).to.eql("Dudemang");
   })
@@ -14,12 +20,5 @@ describe('Dude Tests', () => {
   })
   it('He should be chillin\'', () => {
     expect(dude.chill()).to.be.true;
-  })
-  it('He should have greeted a person', () => {
-    expect(dude.greet()[0]).to.be.true;
-  })
-  it('He should have greeted a person by name', () => {
-    var testGreeting = dude.greet('Jim');
-    expect(testGreeting[1]).to.eql('Jim');
   })
 })
