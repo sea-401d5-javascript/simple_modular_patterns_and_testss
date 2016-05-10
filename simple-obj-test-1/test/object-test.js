@@ -13,10 +13,10 @@ describe('Dude Tests', () => {
     expect(dude.age).to.be.at.least(98);
   })
   it('He should be chillin\'', () => {
-    expect(dude.chill()).to.eql(true);
+    expect(dude.chill()).to.be.true;
   })
   it('He should have greeted a person', () => {
-    expect(dude.greet()[0]).to.eql(true);
+    expect(dude.greet()[0]).to.be.true;
   })
   it('He should have greeted a person by name', () => {
     var testGreeting = dude.greet('Jim');
