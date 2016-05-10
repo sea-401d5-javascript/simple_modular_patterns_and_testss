@@ -1,4 +1,4 @@
-exports = module.exports = {};
+module.exports = exports = {};
 
 exports.greet = name => 'hello ' + name;
 
