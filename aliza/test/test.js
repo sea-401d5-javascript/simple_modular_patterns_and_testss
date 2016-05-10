@@ -4,7 +4,9 @@ const hello = require('../greet');
 
 describe('greeting name test ', () => {
   it('should greet my name ', () => {
-    var name = 'Aliza'
-    expect(hello.greet(name)).to.eql('Hello Aliza');
+    expect(hello.greet('Aliza')).to.eql('Hello Aliza');
+  })
+  it('should greet no name ', () => {
+    expect(hello.greet()).to.eql('Hello there!');
   })
 });
