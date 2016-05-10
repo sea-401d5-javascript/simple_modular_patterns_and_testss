@@ -1,0 +1,18 @@
+{
+  "name": "modular_patterns",
+  "version": "1.0.0",
+  "description": "first 401 assignment",
+  "main": "greet.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "stephen schroeder",
+  "license": "ISC"
+}
