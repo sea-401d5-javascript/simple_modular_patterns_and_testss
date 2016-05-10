@@ -8,3 +8,10 @@ describe('It\'s a greet function', () => {
     expect(greet('larry')).to.equal('hello larry');
   });
 });
+
+describe('console function', function() {
+  it('should take arguments via the console', function() {
+    var arg = ['node_itself', 'path_to_file', 'HRPuffinstuff'];
+    expect(greetMe(arg)).to.equal('hello HRPuffinstuff');
+  });
+});
