@@ -8,14 +8,16 @@ gulp.task('default', ['lint','test'], function (){
   console.log('Gulp rocks');
 });
 
+gulp.task('lint', () => {
+  gulp.src(['./**/*.js','!./node_modules/*.js'] )
+  .pipe(eslint())
+  .pipe(eslint.format())
+});
 gulp.task('test', () => {
   return gulp.src('./simple-object-test/object-test/test.js', {read: false})
     .pipe(mocha({reporter: 'nyan'}));
 });
 
-
-gulp.task('lint', () => {
-  gulp.src('./*.js')
-    .pipe(eslint())
-    .pipe(eslint.format())
+gulp.task('watch', () => {
+  gulp.watch('./simple-object-test/**/*.js', ['lint', 'test']);
 });
