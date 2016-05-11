@@ -1,8 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
 const friend = require('../your_new_friend')
-const greeter = require('../greet')
-
 
 describe('Testing your new friend', () => {
   it('Your friend uses your name', () => {
