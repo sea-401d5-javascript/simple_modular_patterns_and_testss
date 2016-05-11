@@ -1,7 +1,13 @@
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 const lint = require('gulp-eslint');
-const merge = require('merge-stream')
+const merge = require('merge-stream');
+
+const gulpFiles = {
+  testFilesSrc: './test/greet-test.js',
+  greetSrc: './greet.js'
+}
+
 const opts = {
    'extends': 'eslint:recommended',
    'ecmaFeatures': {
@@ -43,14 +49,14 @@ const opts = {
      'node': true,
      'es6': true
    }
-
  }
 
+
 gulp.task('linter' , () => {
-   var greet = gulp.src('./greet.js')
+   var greet = gulp.src(gulpFiles.greetSrc)
    .pipe(lint(opts))
    .pipe(lint.format());
-   var greetTest = gulp.src('./test/greet-test.js')
+   var greetTest = gulp.src(gulpFiles.testFilesSrc)
    .pipe(lint(opts))
    .pipe(lint.format());
 
@@ -58,13 +64,13 @@ gulp.task('linter' , () => {
 })
 
 gulp.task('tests', () => {
-  return gulp.src('./test/greet-test.js', {read: false})
+  return gulp.src(gulpFiles.testFilesSrc, {read: false})
     .pipe(mocha({reporter: 'nyan'}));
 })
 
 gulp.task('watch', () => {
-  gulp.watch('./test/greet-test.js', ['linter', 'tests']);
-  gulp.watch('./greet.js', ['linter', 'tests']);
+  gulp.watch(gulpFiles.testFilesSrc, ['linter', 'tests']);
+  gulp.watch(gulpFiles.greetSrc, ['linter', 'tests']);
 })
 
 gulp.task('default', ['watch', 'linter', 'tests'], () => {
