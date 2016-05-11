@@ -2,9 +2,11 @@
 
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-const mocha = require('gulp-mocha')
+const mocha = require('gulp-mocha');
 
-gulp.task('default', ['lint','test','watch'], function (){
+
+
+gulp.task('default', ['lint','test'], function (){
   console.log('Gulp rocks');
 });
 
@@ -18,8 +20,4 @@ gulp.task('test', () => {
     .pipe(mocha());
 });
 
-gulp.task('watch', () => {
-  gulp.watch('./simple-object-test/**/*.js', ['lint', 'test']);
-});
-
-console.log('sup');
+gulp.watch('./simple-object-test/**/*.js', ['lint', 'test']);
