@@ -158,10 +158,7 @@ no-inline-comments: 1,
 no-lonely-if: 1,
 no-mixed-spaces-and-tabs: 2,
 no-multiple-empty-lines: [
-1,
-{
-max: 2
-}
+1
 ],
 no-nested-ternary: 2,
 no-new-object: 2,
