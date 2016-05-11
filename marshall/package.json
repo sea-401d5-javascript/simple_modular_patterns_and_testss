@@ -1,0 +1,11 @@
+{
+  "name": "modular-patterns",
+  "version": "0.0.0",
+  "description": "Just picking up the ropes of node and package.json",
+  "author": "me",
+  "dependancies": {
+    "gulp": "3.9.1",
+    "chai": "3.5.0",
+    "mocha": "2.4.0"
+  }
+}
