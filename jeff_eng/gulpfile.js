@@ -4,5 +4,11 @@ const mocha = require('gulp-mocha');
 
 gulp.task('mochachai', () => {
   gulp.src('./test/greet_test.js')
-    .pipe(mocha())
+    .pipe(mocha());
+});
+
+gulp.task('eslint', () => {
+  gulp.src('./greet_module.js');
+    .pipe(eslint());
+    .pipe(eslint.format());
 });
