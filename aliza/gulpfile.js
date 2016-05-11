@@ -6,8 +6,9 @@ gulp.task('default', ['lint', 'mocha'], () => {
   console.log('default for lint and mocha');
 });
 
+
 gulp.task('lint', () => {
-  gulp.src('greet.js')
+  gulp.src('/*.js')
     .pipe(eslint({}))
     .pipe(eslint.format())
 });
@@ -16,3 +17,5 @@ gulp.task('mocha', () => {
 	gulp.src('test/test.js')
 		.pipe(mocha());
 });
+
+gulp.watch('./*', ['lint', 'mocha']);
