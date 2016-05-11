@@ -1,3 +1,5 @@
+'use strict';
+
 const chai = require('chai');
 const expect = chai.expect;
 const dude = require('../object');
@@ -21,4 +23,4 @@ describe('Dude Tests', () => {
   it('He should be chillin\'', () => {
     expect(dude.chill()).to.be.true;
   })
-})
+});

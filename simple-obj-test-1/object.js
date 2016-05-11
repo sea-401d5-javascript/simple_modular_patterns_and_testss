@@ -1,4 +1,6 @@
-exports = module.exports = {}
+'use strict';
+
+exports = module.exports = {};
 
 /* VVV--- Code from assignment ---VVV */
 exports.greet = function(name) {
