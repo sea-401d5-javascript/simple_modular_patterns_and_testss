@@ -1,11 +1,7 @@
-(function() {
-  exports = module.exports = {};
-  exports.greet = function(name) {
-    return 'Hello ' + name;
-  };
+'use strict';
 
-  if (!module.parent) {
-    console.log(exports.greet(process.argv.slice(2)));
-  };
-
-})();
+const greet = module.exports = function() {
+  let name = process.argv[2] || 'friend';
+  return 'Hello ' + name;
+};
+console.log(greet());
